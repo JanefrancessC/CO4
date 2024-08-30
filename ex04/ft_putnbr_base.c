@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cokeke <cokeke@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 22:04:11 by cokeke            #+#    #+#             */
-/*   Updated: 2024/08/30 06:04:30 by cokeke           ###   ########.fr       */
+/*   Created: 2024/08/20 17:07:38 by cokeke            #+#    #+#             */
+/*   Updated: 2024/08/23 12:01:08 by cokeke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,19 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+int	ft_strlen(char *s)
 {
-	while (*str)
+	int	len;
+
+	len = 0;
+	while (*s)
 	{
-		ft_putchar(*str);
-		str++;
+		len++;
+		s++;
 	}
+	return (len);
 }
 
-int	main(void)
+void	ft_putnbr_base(int nbr, char *base)
 {
-	ft_putstr("How are you?");
-	return (0);
 }
